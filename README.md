@@ -1,3 +1,4 @@
+# GEN AI ALL CONCEPTS AND MODELS ARE WRITTEN THEIR #
 # =========================
 # 🧠 1. PROMPTS
 # =========================
