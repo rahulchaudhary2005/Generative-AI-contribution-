@@ -1,59 +1,37 @@
 # GEN AI ALL CONCEPTS AND MODELS ARE WRITTEN THEIR #
-# =========================
-# 🧠 1. PROMPTS
-# =========================
+# ===================== 🧠 PROMPTS =====================
 
-# Old (still used)
+# Old
 from langchain.prompts import (
-    PromptTemplate,
-    ChatPromptTemplate,
-    FewShotPromptTemplate,
-    FewShotChatMessagePromptTemplate,
-    MessagesPlaceholder,
-    SystemMessagePromptTemplate,
-    HumanMessagePromptTemplate,
+    PromptTemplate, ChatPromptTemplate, FewShotPromptTemplate,
+    FewShotChatMessagePromptTemplate, MessagesPlaceholder,
+    SystemMessagePromptTemplate, HumanMessagePromptTemplate,
     AIMessagePromptTemplate
 )
 
-# New (Recommended)
-from langchain_core.prompts import (
-    PromptTemplate,
-    ChatPromptTemplate,
-    MessagesPlaceholder
-)
+# New (🔥 Recommended)
+from langchain_core.prompts import PromptTemplate, ChatPromptTemplate, MessagesPlaceholder
 
 
-# =========================
-# 🤖 2. LLMs & CHAT MODELS
-# =========================
+# ===================== 🤖 MODELS =====================
 
 from langchain_openai import ChatOpenAI, OpenAI
 from langchain_community.llms import HuggingFaceHub
 from langchain_community.chat_models import ChatOllama
 
 
-# =========================
-# 🔗 3. RUNNABLES (NEW)
-# =========================
+# ===================== 🔗 RUNNABLES =====================
 
 from langchain_core.runnables import (
-    RunnableSequence,
-    RunnableLambda,
-    RunnableParallel,
-    RunnablePassthrough
+    RunnableSequence, RunnableLambda,
+    RunnableParallel, RunnablePassthrough
 )
 
-# Old Chains (important for interviews)
-from langchain.chains import (
-    LLMChain,
-    SequentialChain,
-    SimpleSequentialChain
-)
+# Old (Interview)
+from langchain.chains import LLMChain, SequentialChain, SimpleSequentialChain
 
 
-# =========================
-# 🧠 4. MEMORY
-# =========================
+# ===================== 🧠 MEMORY =====================
 
 from langchain.memory import (
     ConversationBufferMemory,
@@ -62,104 +40,59 @@ from langchain.memory import (
 )
 
 
-# =========================
-# 📄 5. DOCUMENT LOADERS
-# =========================
+# ===================== 📄 LOADERS =====================
 
 from langchain_community.document_loaders import (
-    PyPDFLoader,
-    TextLoader,
-    WebBaseLoader,
-    DirectoryLoader,
-    CSVLoader
+    PyPDFLoader, TextLoader, WebBaseLoader,
+    DirectoryLoader, CSVLoader
 )
 
 
-# =========================
-# ✂️ 6. TEXT SPLITTERS
-# =========================
+# ===================== ✂️ SPLITTERS =====================
 
-from langchain.text_splitter import (
-    RecursiveCharacterTextSplitter,
-    CharacterTextSplitter
-)
+from langchain.text_splitter import RecursiveCharacterTextSplitter, CharacterTextSplitter
 
 
-# =========================
-# 🔢 7. EMBEDDINGS
-# =========================
+# ===================== 🔢 EMBEDDINGS =====================
 
 from langchain_openai import OpenAIEmbeddings
 from langchain_community.embeddings import HuggingFaceEmbeddings
 
 
-# =========================
-# 🗄️ 8. VECTOR STORES
-# =========================
+# ===================== 🗄️ VECTOR DB =====================
 
-from langchain_community.vectorstores import (
-    FAISS,
-    Chroma
-)
-
-# External
+from langchain_community.vectorstores import FAISS, Chroma
 from langchain_pinecone import PineconeVectorStore
 
 
-# =========================
-# 🔍 9. RETRIEVERS
-# =========================
+# ===================== 🔍 RETRIEVERS =====================
 
 from langchain_core.vectorstores import VectorStoreRetriever
-from langchain.retrievers import (
-    MultiQueryRetriever,
-    ContextualCompressionRetriever
-)
+from langchain.retrievers import MultiQueryRetriever, ContextualCompressionRetriever
 
 
-# =========================
-# 🤖 10. AGENTS
-# =========================
+# ===================== 🤖 AGENTS =====================
 
-from langchain.agents import (
-    initialize_agent,
-    AgentExecutor,
-    create_openai_tools_agent
-)
+from langchain.agents import initialize_agent, AgentExecutor, create_openai_tools_agent
 
 
-# =========================
-# 🔧 11. TOOLS
-# =========================
+# ===================== 🔧 TOOLS =====================
 
 from langchain.tools import Tool
 from langchain_core.tools import tool
 
 
-# =========================
-# 🧩 12. OUTPUT PARSERS
-# =========================
+# ===================== 🧩 PARSERS =====================
 
-from langchain_core.output_parsers import (
-    StrOutputParser,
-    JsonOutputParser
-)
+from langchain_core.output_parsers import StrOutputParser, JsonOutputParser
 
 
-# =========================
-# 🧠 13. MESSAGES / SCHEMA
-# =========================
+# ===================== 🧠 MESSAGES =====================
 
-from langchain_core.messages import (
-    HumanMessage,
-    AIMessage,
-    SystemMessage
-)
+from langchain_core.messages import HumanMessage, AIMessage, SystemMessage
 
 
-# =========================
-# 🔥 MOST IMPORTANT (MUST KNOW)
-# =========================
+# ===================== 🔥 CORE (MUST KNOW) =====================
 
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_openai import ChatOpenAI
@@ -167,19 +100,12 @@ from langchain_core.runnables import RunnableSequence
 from langchain_core.output_parsers import StrOutputParser
 
 
-# =========================
-# 🚀 MODERN PIPELINE (NEW STANDARD)
-# =========================
-
-from langchain_core.prompts import ChatPromptTemplate
-from langchain_openai import ChatOpenAI
-from langchain_core.output_parsers import StrOutputParser
+# ===================== 🚀 MODERN PIPELINE =====================
 
 prompt = ChatPromptTemplate.from_template("Explain {topic}")
 model = ChatOpenAI()
 parser = StrOutputParser()
 
 chain = prompt | model | parser
-
 response = chain.invoke({"topic": "Transformers in NLP"})
 print(response)
