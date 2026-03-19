@@ -1,4 +1,4 @@
-🧠 🔥 1. PROMPTS MODULE
+*🧠 🔥 1. PROMPTS MODULE*
 📦 Old (still widely used)
 from langchain.prompts import (
     PromptTemplate,
