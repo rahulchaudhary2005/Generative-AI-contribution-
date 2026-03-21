@@ -184,3 +184,8 @@ chain = prompt | model | parser
 
 response = chain.invoke({"topic": "Transformers in NLP"})
 print(response)
+
+# =========================
+# 🚀 CHAIN FORMATION IN LANGCHAIN
+# =========================
+
