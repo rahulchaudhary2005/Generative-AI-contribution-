@@ -1,0 +1,7 @@
+Key Aspects of RAG:
+How it Works: When a user asks a question, the RAG system searches a knowledge base (using semantic search or embeddings) to find relevant, up-to-date information. This context is then added to the user's prompt and sent to the LLM to generate an accurate answer.
+Why it Matters: RAG allows AI to use private, internal, or updated data without the need to retrain or fine-tune the model, making it a cost-effective solution for enterprises.
+Components: A typical RAG system consists of a retriever (searches data), the knowledge base (documents), an integration layer, and a generator (the LLM).
+Applications: It is widely used for creating chatbots that need to reference specific company policies, in legal/healthcare industries, or for any task requiring evidence-based, current, and cited answers. 
+Amazon Web Services
+Amazon Web Services
