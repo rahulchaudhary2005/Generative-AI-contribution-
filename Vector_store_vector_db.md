@@ -1,3 +1,6 @@
+## Vector Systems
+
+```
 Vector Systems
 ├── Vector Store (Lightweight)
 │   ├── In-Memory Storage
@@ -24,3 +27,4 @@ Vector Systems
         ├── Weaviate
         ├── Qdrant
         └── Milvus
+```
