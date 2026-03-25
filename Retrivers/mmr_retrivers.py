@@ -1,3 +1,5 @@
+# MMR retrivers in langchain with huggingface 
+
 from langchain_community.vectorstores import Chroma , FAISS
 from langchain_core.prompts import PromptTemplate
 from langchain_huggingface import HuggingFaceEmbeddings
